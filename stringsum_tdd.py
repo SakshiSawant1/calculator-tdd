@@ -19,6 +19,10 @@ class StringCalculator:
             nums = nums.replace('\n', ',')
         # Split string and convert into integers
         integers = [int(n) for n in nums.split(',')]
+        # neagtive number are not allow
+        negatives = [n for n in integers if n < 0]
+        if negatives:
+            raise ValueError(f"negative numbers not allowed: {','.join(map(str, negatives))}")
         # Return the sum of integers
         return sum(integers)
 
