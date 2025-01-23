@@ -10,4 +10,8 @@ class TestStringCalculator:
     def test_custom_delimiter(self):
         calc = StringCalculator()
         assert calc.add("//;\n1;2") == 3
+    # For a single number
+    def test_single_number(self):
+        calc = StringCalculator()
+        assert calc.add("1") == 1
     
