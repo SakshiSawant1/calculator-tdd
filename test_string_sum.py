@@ -18,3 +18,7 @@ class TestStringCalculator:
     def test_newline_delimiter(self):
         calc = StringCalculator()
         assert calc.add("1\n2,3") == 6
+    # For two numbers
+    def test_two_numbers(self):
+        calc = StringCalculator()
+        assert calc.add("1,5") == 6
