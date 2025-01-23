@@ -5,3 +5,7 @@ class StringCalculator:
     """
     def __init__(self):
         self.delimiter = ','
+    def add(self, numbers: str) -> int:
+        #for string is empty Return 0 if
+        if not numbers:
+            return 0
