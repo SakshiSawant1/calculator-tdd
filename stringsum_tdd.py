@@ -17,4 +17,7 @@ class StringCalculator:
             nums = nums.replace(delimiter, ',')
         # Split string and convert into integers
         integers = [int(n) for n in nums.split(',')]
+        # Return the sum of integers
+        return sum(integers)
+
 
