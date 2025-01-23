@@ -26,3 +26,9 @@ class TestStringCalculator:
     def test_multiple_numbers(self):
         calc = StringCalculator()
         assert calc.add("1,2,3,4,5") == 15
+    # For negative numbers
+    def test_negative_numbers(self):
+        calc = StringCalculator()
+        with pytest.raises(ValueError) as exc_info:
+            calc.add("-1,2,-3")
+        assert str(exc_info.value) == "negative numbers not allowed: -1,-3"
