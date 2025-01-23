@@ -22,3 +22,7 @@ class TestStringCalculator:
     def test_two_numbers(self):
         calc = StringCalculator()
         assert calc.add("1,5") == 6
+     # For multiple numbers
+    def test_multiple_numbers(self):
+        calc = StringCalculator()
+        assert calc.add("1,2,3,4,5") == 15
