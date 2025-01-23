@@ -14,4 +14,7 @@ class TestStringCalculator:
     def test_single_number(self):
         calc = StringCalculator()
         assert calc.add("1") == 1
-    
+    # For newline delimiter
+    def test_newline_delimiter(self):
+        calc = StringCalculator()
+        assert calc.add("1\n2,3") == 6
