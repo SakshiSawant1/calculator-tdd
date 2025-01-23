@@ -15,3 +15,6 @@ class StringCalculator:
             delimiter, nums = numbers[2:].split('\n', 1)
             nums = nums.replace('\n', delimiter)
             nums = nums.replace(delimiter, ',')
+        # Split string and convert into integers
+        integers = [int(n) for n in nums.split(',')]
+
