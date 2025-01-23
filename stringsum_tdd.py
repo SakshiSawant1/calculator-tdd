@@ -9,3 +9,9 @@ class StringCalculator:
         #for string is empty Return 0 if
         if not numbers:
             return 0
+            # for a custom delimiter at the start
+        nums = numbers
+        if numbers.startswith('//'):
+            delimiter, nums = numbers[2:].split('\n', 1)
+            nums = nums.replace('\n', delimiter)
+            nums = nums.replace(delimiter, ',')
